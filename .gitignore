@@ -1,0 +1,9 @@
+# рабочие материалы — не публикуются
+dev/
+docs/
+assets/source/
+assets/ig/
+assets/generated/raw-*
+assets/generated/*.jpg
+!assets/generated/og-image.jpg
+assets/brand/*.png
