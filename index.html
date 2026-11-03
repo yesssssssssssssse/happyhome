@@ -27,11 +27,6 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <!--
-    АНАЛИТИКА. Вставьте сюда код счётчика Яндекс.Метрики (Метрика → Настройка → Код счётчика).
-    Цели уже размечены атрибутом data-goal на кнопках (whatsapp, call, instagram, calc_send и т. д.),
-    js/main.js вызывает ym(COUNTER_ID, 'reachGoal', goal) — укажите номер счётчика в js/main.js (const YM_ID).
-  -->
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Перейти к содержимому</a>
@@ -51,8 +46,6 @@
     <!-- 1. HERO -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__stage">
-        <div class="blob blob--1" aria-hidden="true"></div>
-        <div class="blob blob--2" aria-hidden="true"></div>
         <i class="ic deco deco--spray" style="-webkit-mask-image:url(assets/icons/spray.svg);mask-image:url(assets/icons/spray.svg)" aria-hidden="true"></i>
         <i class="ic deco deco--sparkle" style="-webkit-mask-image:url(assets/icons/sparkle.svg);mask-image:url(assets/icons/sparkle.svg)" aria-hidden="true"></i>
 
@@ -76,10 +69,10 @@
         <p class="lead" data-i18n="hero_lead">Уборка квартир, домов и коммерции, химчистка мебели и помощница по дому. Приезжаем со своим оборудованием и безопасными средствами.</p>
         <p class="founder-line"><b data-i18n="founder_name">Айгерим</b> — <span data-i18n="founder_role">основательница HappyHome</span></p>
         <div class="cta-row">
-          <a class="btn btn--primary js-wa" data-goal="whatsapp_hero" data-wa="order" href="https://wa.me/77771512313" target="_blank" rel="noopener">
+          <a class="btn btn--primary js-wa" data-wa="order" href="https://wa.me/77771512313" target="_blank" rel="noopener">
             <i class="ic btn__ic" style="-webkit-mask-image:url(assets/icons/whatsapp.svg);mask-image:url(assets/icons/whatsapp.svg)" aria-hidden="true"></i><span data-i18n="cta_order">Заказать уборку</span>
           </a>
-          <a class="btn btn--ghost" data-goal="call_hero" href="tel:+77771512313">
+          <a class="btn btn--ghost" href="tel:+77771512313">
             <i class="ic btn__ic btn__ic--dark" style="-webkit-mask-image:url(assets/icons/phone.svg);mask-image:url(assets/icons/phone.svg)" aria-hidden="true"></i><span data-i18n="cta_call">Позвонить</span>
           </a>
         </div>
@@ -88,24 +81,24 @@
 
     <!-- 2. ССЫЛКИ -->
     <nav class="links reveal" aria-label="Контакты и соцсети">
-      <a class="link link--wa js-wa" data-wa="hello" data-goal="whatsapp_links" href="https://wa.me/77771512313" target="_blank" rel="noopener">
+      <a class="link link--wa js-wa" data-wa="hello" href="https://wa.me/77771512313" target="_blank" rel="noopener">
         <span class="link__ic"><i class="ic" style="-webkit-mask-image:url(assets/icons/whatsapp.svg);mask-image:url(assets/icons/whatsapp.svg)" aria-hidden="true"></i></span>
         <span class="link__t"><b>WhatsApp</b><small>+7 777 151 23 13</small></span><span class="link__go" aria-hidden="true">→</span>
       </a>
-      <a class="link" data-goal="call_links" href="tel:+77771512313">
+      <a class="link" href="tel:+77771512313">
         <span class="link__ic"><i class="ic" style="-webkit-mask-image:url(assets/icons/phone.svg);mask-image:url(assets/icons/phone.svg)" aria-hidden="true"></i></span>
         <span class="link__t"><b data-i18n="l_call">Позвонить</b><small>+7 777 151 23 13</small></span><span class="link__go" aria-hidden="true">→</span>
       </a>
-      <a class="link" data-goal="instagram" href="https://www.instagram.com/happyhome.clean/" target="_blank" rel="noopener">
+      <a class="link" href="https://www.instagram.com/happyhome.clean/" target="_blank" rel="noopener">
         <span class="link__ic"><i class="ic" style="-webkit-mask-image:url(assets/icons/instagram.svg);mask-image:url(assets/icons/instagram.svg)" aria-hidden="true"></i></span>
         <span class="link__t"><b>Instagram</b><small>@happyhome.clean</small></span><span class="link__go" aria-hidden="true">→</span>
       </a>
-      <a class="link" data-goal="threads" href="https://www.threads.com/@happyhome.clean" target="_blank" rel="noopener">
+      <a class="link" href="https://www.threads.com/@happyhome.clean" target="_blank" rel="noopener">
         <span class="link__ic"><i class="ic" style="-webkit-mask-image:url(assets/icons/threads.svg);mask-image:url(assets/icons/threads.svg)" aria-hidden="true"></i></span>
         <span class="link__t"><b>Threads</b><small>@happyhome.clean</small></span><span class="link__go" aria-hidden="true">→</span>
       </a>
       <!-- TODO: замените на прямую ссылку карточки 2GIS -->
-      <a class="link" data-goal="2gis" href="https://2gis.kz/aktobe/search/Happyhome.clean" target="_blank" rel="noopener">
+      <a class="link" href="https://2gis.kz/aktobe/search/Happyhome.clean" target="_blank" rel="noopener">
         <span class="link__ic"><i class="ic" style="-webkit-mask-image:url(assets/icons/map.svg);mask-image:url(assets/icons/map.svg)" aria-hidden="true"></i></span>
         <span class="link__t"><b data-i18n="l_2gis">Мы в 2GIS</b><small data-i18n="l_2gis_s">Отзывы и рейтинг · Актобе</small></span><span class="link__go" aria-hidden="true">→</span>
       </a>
@@ -116,7 +109,7 @@
       <h2 id="why-title" class="h2" data-i18n-html="why_h">Почему <span class="mark">выбирают</span> нас</h2>
       <div class="why">
         <article class="why__item">
-          <span class="why__ic"><i class="ic" style="-webkit-mask-image:url(assets/icons/steam.svg);mask-image:url(assets/icons/steam.svg)" aria-hidden="true"></i></span>
+          <span class="why__ic"><i class="ic" style="-webkit-mask-image:url(assets/icons/tools.svg);mask-image:url(assets/icons/tools.svg)" aria-hidden="true"></i></span>
           <h3 data-i18n="why1_t">Профессиональная техника</h3>
           <p data-i18n="why1_p">Парочистители Kärcher SC 4 и моющие пылесосы — весь инвентарь привозим сами.</p>
         </article>
@@ -307,7 +300,7 @@
             <b id="calcSum">18 000 – 24 000 ₸</b>
             <span id="calcNote" data-i18n="c_note">Вторая кухня и доп. санузлы — дополнительно</span>
           </output>
-          <a class="btn btn--white js-wa" data-wa="calc" data-goal="calc_send" href="https://wa.me/77771512313" target="_blank" rel="noopener">
+          <a class="btn btn--white js-wa" data-wa="calc" href="https://wa.me/77771512313" target="_blank" rel="noopener">
             <i class="ic btn__ic btn__ic--dark" style="-webkit-mask-image:url(assets/icons/whatsapp.svg);mask-image:url(assets/icons/whatsapp.svg)" aria-hidden="true"></i><span data-i18n="c_send">Отправить расчёт в WhatsApp</span>
           </a>
         </form>
@@ -327,7 +320,7 @@
         <p data-i18n="about_p2">Я вела блог, проекты и постоянно чувствовала, что ни на что не хватает времени. Мечтала, чтобы иногда приходил помощник и убирал дом, а я могла выдохнуть.</p>
         <p data-i18n="about_p3">Так родилась мечта связать мам и клининг: команда, где работают такие же мамы, которые понимают, как важно навести чистоту без спешки, с душой и любовью.</p>
         <blockquote class="quote" data-i18n="about_q">Теперь я помогаю женщинам возвращать себе самое ценное — время для семьи и себя.</blockquote>
-        <a class="textlink" href="https://www.instagram.com/aima.clean/" target="_blank" rel="noopener" data-goal="instagram_founder">Instagram @aima.clean →</a>
+        <a class="textlink" href="https://www.instagram.com/aima.clean/" target="_blank" rel="noopener">Instagram @aima.clean →</a>
       </div>
     </section>
 
@@ -367,13 +360,13 @@
           <i class="ic promo__ic" style="-webkit-mask-image:url(assets/icons/gift.svg);mask-image:url(assets/icons/gift.svg)" aria-hidden="true"></i>
           <h3 data-i18n="pr1_t">Подарочный сертификат</h3>
           <p data-i18n="pr1_p">Подарите близким чистый дом и свободный день. Номинал и оформление — по запросу в WhatsApp.</p>
-          <a class="textlink textlink--light js-wa" data-wa="gift" data-goal="whatsapp_gift" href="https://wa.me/77771512313" target="_blank" rel="noopener" data-i18n="pr_btn">Узнать подробнее →</a>
+          <a class="textlink textlink--light js-wa" data-wa="gift" href="https://wa.me/77771512313" target="_blank" rel="noopener" data-i18n="pr_btn">Узнать подробнее →</a>
         </article>
         <article class="promo__card">
           <i class="ic promo__ic" style="-webkit-mask-image:url(assets/icons/calendar.svg);mask-image:url(assets/icons/calendar.svg)" aria-hidden="true"></i>
           <h3 data-i18n="pr2_t">Абонемент «Ассистент по дому»</h3>
           <p data-i18n="pr2_p">Помощница приходит по графику 1–2 раза в неделю и берёт быт под контроль.</p>
-          <a class="textlink js-wa" data-wa="assistant" data-goal="whatsapp_assistant" href="https://wa.me/77771512313" target="_blank" rel="noopener" data-i18n="pr_btn">Узнать подробнее →</a>
+          <a class="textlink js-wa" data-wa="assistant" href="https://wa.me/77771512313" target="_blank" rel="noopener" data-i18n="pr_btn">Узнать подробнее →</a>
         </article>
       </div>
       <!-- PLACEHOLDER: актуальных акций в Instagram не найдено. Добавьте карточку акции сюда. -->
@@ -437,11 +430,11 @@
     <section class="final reveal" aria-labelledby="final-title">
       <h2 id="final-title" class="h2 h2--light" data-i18n="final_h">Готовы вернуть себе свободный день?</h2>
       <p data-i18n="final_p">Напишите нам — рассчитаем стоимость и подберём удобное время.</p>
-      <a class="btn btn--white js-wa" data-wa="order" data-goal="whatsapp_final" href="https://wa.me/77771512313" target="_blank" rel="noopener">
+      <a class="btn btn--white js-wa" data-wa="order" href="https://wa.me/77771512313" target="_blank" rel="noopener">
         <i class="ic btn__ic btn__ic--dark" style="-webkit-mask-image:url(assets/icons/whatsapp.svg);mask-image:url(assets/icons/whatsapp.svg)" aria-hidden="true"></i><span data-i18n="cta_order">Заказать уборку</span>
       </a>
       <dl class="contacts">
-        <div><dt data-i18n="ct_phone">Телефон и WhatsApp</dt><dd><a href="tel:+77771512313" data-goal="call_final">+7 777 151 23 13</a></dd></div>
+        <div><dt data-i18n="ct_phone">Телефон и WhatsApp</dt><dd><a href="tel:+77771512313">+7 777 151 23 13</a></dd></div>
         <div><dt data-i18n="ct_city">Город</dt><dd data-i18n="ct_city_v">Актобе</dd></div>
         <!-- PLACEHOLDER: график работы не найден в Instagram -->
         <div><dt data-i18n="ct_hours">График</dt><dd data-i18n="ct_hours_v">Уточняйте в WhatsApp</dd></div>
@@ -455,7 +448,7 @@
   </footer>
 </div>
 
-<a class="fab js-wa" data-wa="hello" data-goal="whatsapp_fab" href="https://wa.me/77771512313" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+<a class="fab js-wa" data-wa="hello" href="https://wa.me/77771512313" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
   <i class="ic" style="-webkit-mask-image:url(assets/icons/whatsapp.svg);mask-image:url(assets/icons/whatsapp.svg)" aria-hidden="true"></i><span data-i18n="fab">Написать в WhatsApp</span>
 </a>
 

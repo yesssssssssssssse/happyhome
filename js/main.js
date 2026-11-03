@@ -4,7 +4,6 @@
   if (/static/.test(location.hash)) document.documentElement.classList.add('no-js');
   var m = location.hash.match(/lang=(ru|kk)/);
   var WA_PHONE = '77771512313'; // международный формат без «+»
-  var YM_ID = null;             // номер счётчика Яндекс.Метрики, например 12345678
 
   /* ---------- i18n ---------- */
   var KK = {
@@ -202,11 +201,6 @@
     new IntersectionObserver(function (e) { fab.classList.toggle('show', !e[0].isIntersecting); }, { threshold: 0.15 }).observe(hero);
   } else if (fab) { fab.classList.add('show'); }
 
-  /* ---------- Цели аналитики ---------- */
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('[data-goal]');
-    if (a && YM_ID && typeof window.ym === 'function') window.ym(YM_ID, 'reachGoal', a.getAttribute('data-goal'));
-  });
 
   /* ---------- Язык ---------- */
   snapshotRu();
