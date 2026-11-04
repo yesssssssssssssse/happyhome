@@ -316,8 +316,9 @@ button,input{font:inherit}
 .plan:before{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(58,142,146,.22),transparent 70%);pointer-events:none}
 .plan--accent:before{background:radial-gradient(circle,rgba(255,255,255,.22),transparent 70%)}
 .plan__badge{display:inline-block;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-700);background:#fff;border-radius:999px;padding:6px 12px;box-shadow:0 4px 12px -6px rgba(29,71,73,.4)}
-.plan__t{font-family:var(--f-head);font-weight:700;font-size:20px;margin:14px 0 6px}
-.plan__price{font-family:var(--f-head);font-weight:700;font-size:clamp(32px,9.6vw,42px);line-height:1;letter-spacing:-.02em;color:var(--teal-800);white-space:nowrap}
+.plan__t{font-family:var(--f-head);font-weight:700;font-size:20px;margin:14px 0 14px}
+.plan__price{font-family:var(--f-head);font-weight:700;font-size:clamp(32px,11.2vw,54px);line-height:1;letter-spacing:-.02em;color:var(--teal-800);white-space:nowrap}
+.plan__price{margin-bottom:20px}
 .plan__price span{font-size:.6em;opacity:.8}
 .plan--accent .plan__price{color:#fff}
 .plan__per{font-size:14px;font-weight:700;margin:8px 0 16px;color:var(--teal-700)}
