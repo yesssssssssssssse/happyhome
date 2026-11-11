@@ -31,6 +31,8 @@
     why4_p: 'Негізін қалаушы жұмысты сізбен бірге өзі тексеріп, қабылдайды.',
     svc_h: 'Қызметтер <span class="mark">мен бағалар</span>',
     svc_sub: 'Бағалар біздің прайстан алынған. Нақты бағаны сипаттама немесе фото бойынша растаймыз.',
+    pr_h: 'Прайс-<span class="mark">парақтар</span>',
+    pr_sub: 'Жанына қарай сырғытыңыз, толық экранда ашу үшін басыңыз.',
     s1_t: 'Ылғалды тазалау', s1_m: 'Орташа 4–5 сағат',
     s1_l: ['Барлық беттердің шаңы, айналар мен шынылар', 'Терезе алды, есіктер, тұтқалар, ажыратқыштар мен розеткалар', 'Едендер мен плинтустар, кілемдерді шаңсорғышпен тазалау', 'Ас үй: плита, үстел беті, техниканың сырты, раковина', 'Санузел: сантехника, айналар, шкафтардың сырты, еден', '5 кг-ға дейін қоқысты шығарамыз'],
     s2_t: 'Бас тазалау', s2_m: 'Орташа 6–8 сағат · терең дезинфекцияға арналған бу тазартқыш',
@@ -217,4 +219,21 @@
   });
   applyLang();
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+})();
+
+/* Прайс-листы: просмотр на весь экран, листание стрелками, свайпом и клавишами */
+(function () {
+  var dlg = document.getElementById('prDlg'); if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('prImg');
+  var items = Array.prototype.slice.call(document.querySelectorAll('.pr__item')), cur = 0;
+  function show(i) { cur = (i + items.length) % items.length; img.src = items[cur].getAttribute('data-full'); img.alt = items[cur].querySelector('img').alt; }
+  items.forEach(function (a, i) { a.addEventListener('click', function (e) { e.preventDefault(); show(i); dlg.showModal(); }); });
+  dlg.querySelector('.pr__close').addEventListener('click', function () { dlg.close(); });
+  dlg.querySelector('.pr__nav--prev').addEventListener('click', function () { show(cur - 1); });
+  dlg.querySelector('.pr__nav--next').addEventListener('click', function () { show(cur + 1); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+  var x0 = null;
+  dlg.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  dlg.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); x0 = null; });
 })();
