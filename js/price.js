@@ -113,6 +113,7 @@
   function nm(o) { return o[L()] || o.ru; }
   function money(n) { return Math.round(n).toLocaleString('ru-RU').replace(/[\s,]/g, ' ') + ' ₸'; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function plural(n, a, b, c) { var m = n % 10, h = n % 100; return m === 1 && h !== 11 ? a : m >= 2 && m <= 4 && (h < 12 || h > 14) ? b : c; }
   function fromP(o) { return (o.from ? '<small>' + u().from + '</small> ' : ''); }
   function stepper(group, id, val, unit) {
     return '<span class="pq" role="group"><button type="button" class="pq__b" data-step="-1" data-g="' + group + '" data-id="' + id + '" aria-label="−"' + (val ? '' : ' disabled') + '>−</button>' +
@@ -151,7 +152,7 @@
       });
       body += '</ul>';
     });
-    return h + '<p class="pcount"><b>' + yes + '</b> ' + u().of + ' ' + all + ' ' + u().inc + '</p>' + body + '<p class="pnote">' + u().note + '</p>';
+    return h + '<p class="pcount">' + (L() === 'kk' ? 'Бұл тазалауға <b>' + yes + '</b> жұмыс түрі кіреді' : 'В эту уборку входит <b>' + yes + '</b> ' + plural(yes, 'вид', 'вида', 'видов') + ' работ') + '</p>' + body + '<p class="pnote">' + u().note + '</p>';
   }
   function tabFurniture() {
     var h = '<div class="pf">';
