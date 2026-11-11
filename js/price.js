@@ -208,6 +208,7 @@
   function render(keepFocus) {
     var nav = root.querySelector('.ptabs');
     nav.innerHTML = u().tabs.map(function (t, i) { return '<button type="button" role="tab" id="ptab' + i + '" aria-controls="ppanel" aria-selected="' + (i === st.tab) + '" tabindex="' + (i === st.tab ? 0 : -1) + '" data-tab="' + i + '">' + t + '</button>'; }).join('');
+    var act = nav.children[st.tab]; if (act) nav.scrollLeft = act.offsetLeft - nav.offsetLeft - (nav.clientWidth - act.offsetWidth) / 2;
     var panel = root.querySelector('.ppanel');
     panel.setAttribute('aria-labelledby', 'ptab' + st.tab);
     panel.innerHTML = TABS[st.tab]();
