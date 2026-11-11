@@ -265,23 +265,13 @@
       </div>
     </section>
 
-    <!-- 4a. ПРАЙС-ЛИСТЫ (картинки 1080×1920, листаются свайпом, по тапу — на весь экран) -->
+    <!-- 4a. ПРАЙС: интерактивный (вкладки, расчёт, корзина → WhatsApp). Рендерит js/price.js -->
     <section class="section reveal" id="prices" aria-labelledby="pr-title">
-      <h2 id="pr-title" class="h2" data-i18n-html="pr_h">Прайс-<span class="mark">листы</span></h2>
-      <p class="sub" data-i18n="pr_sub">Листайте вбок, нажмите, чтобы открыть на весь экран.</p>
-      <ul class="pr" aria-label="Прайс-листы">
-        <li><a class="pr__item" href="assets/price/1-osnovnye.webp" data-full="assets/price/1-osnovnye.webp"><img src="assets/price/1-osnovnye-sm.webp" alt="Основные виды уборки — цены за м²" loading="lazy" decoding="async" width="540" height="960"></a></li>
-        <li><a class="pr__item" href="assets/price/2-vidy.webp" data-full="assets/price/2-vidy.webp"><img src="assets/price/2-vidy-sm.webp" alt="Виды уборки — что входит в каждый тип" loading="lazy" decoding="async" width="540" height="960"></a></li>
-        <li><a class="pr__item" href="assets/price/3-himchistka.webp" data-full="assets/price/3-himchistka.webp"><img src="assets/price/3-himchistka-sm.webp" alt="Химчистка мебели — цены" loading="lazy" decoding="async" width="540" height="960"></a></li>
-        <li><a class="pr__item" href="assets/price/4-arenda.webp" data-full="assets/price/4-arenda.webp"><img src="assets/price/4-arenda-sm.webp" alt="Аренда оборудования — цена за сутки" loading="lazy" decoding="async" width="540" height="960"></a></li>
-        <li><a class="pr__item" href="assets/price/5-dop.webp" data-full="assets/price/5-dop.webp"><img src="assets/price/5-dop-sm.webp" alt="Дополнительные услуги — цены" loading="lazy" decoding="async" width="540" height="960"></a></li>
-      </ul>
-      <dialog class="pr__dlg" id="prDlg" aria-label="Прайс-лист">
-        <button class="pr__close" type="button" aria-label="Закрыть">×</button>
-        <button class="pr__nav pr__nav--prev" type="button" aria-label="Предыдущий">‹</button>
-        <img id="prImg" alt="">
-        <button class="pr__nav pr__nav--next" type="button" aria-label="Следующий">›</button>
-      </dialog>
+      <h2 id="pr-title" class="h2" data-i18n-html="pr_h">Цены и <span class="mark">заказ</span></h2>
+      <p class="sub" data-i18n="pr_sub">Выберите услуги — сумма посчитается сразу, заказ уйдёт в WhatsApp.</p>
+      <div class="ptabs" role="tablist" aria-label="Разделы прайса"></div>
+      <div class="ppanel" id="ppanel" role="tabpanel"></div>
+      <div class="pcart" aria-live="polite"></div>
     </section>
 
     <!-- 4b. АБОНЕМЕНТ: ПОМОЩНИЦА ПО ДОМУ -->
@@ -499,5 +489,6 @@
 </a>
 
 <script src="js/main.js" defer></script>
+<script src="js/price.js" defer></script>
 </body>
 </html>
